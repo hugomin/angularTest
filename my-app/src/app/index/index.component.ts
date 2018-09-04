@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import {UserService} from '../user.service'
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  styleUrls: ['./index.component.css'],
+    providers: [UserService]
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit() {
+  	const a = this.userService.getStatus();
+  	console.log(a)
   }
 
 }

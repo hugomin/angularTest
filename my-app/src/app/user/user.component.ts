@@ -1,5 +1,4 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
-
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
@@ -8,10 +7,8 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 export class UserComponent implements OnInit {
   @Input() public number:string;
   @Output()  public setNumber = new EventEmitter<string>();
-  constructor() { 
-  	
+  constructor() { 	
   }
-
   ngOnInit() {
   }
 
