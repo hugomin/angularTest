@@ -1,4 +1,6 @@
 <div>
   <h1>hello,User</h1>
   <h2>我是用户页</h2>
+  <h3 [title]="number" (click)="getNumber()">{{number}}</h3>
+  <input type="text" [(ngModel)]="number">
 </div>
